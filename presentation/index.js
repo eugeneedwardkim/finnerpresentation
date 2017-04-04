@@ -11,7 +11,9 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  Appear,
+  Image
 } from "spectacle";
 
 // Import image preloader util
@@ -29,16 +31,18 @@ const images = {
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  pinkybrain: require("../assets/pink-n-brain-todolist.jpg")
 };
 
 preloader(images);
 
 const theme = createTheme({
   primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quartenary: "#CECECE"
+  secondary: "#000000",
+  tertiary: "#ef6c00",
+  quartenary: "#26a69a",
+  mediumgray: "#666"
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -50,34 +54,36 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            Finner
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+            a health and wellness app that creates a custom menu and counts your calories
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+        <Slide transition={["fade"]} bgColor="mediumgray">
+          <Heading size={6} textColor="primary" caps>The Vision</Heading>
+          <Text size={6} textColor="secondary">An app that can...</Text>
+          <List>
+            <Appear><ListItem>Count your calories</ListItem></Appear>
+            <Appear><ListItem>Provide a meal plan based on dietary restrictions</ListItem></Appear>
+            <Appear><ListItem>Rule the world</ListItem></Appear>
+          </List>
+          <Appear>
+            <Image src={"../assets/pink-n-brain-todolist.jpg"}></Image>
+          </Appear>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
+          <Heading size={6} textColor="secondary" caps>The Features So far:</Heading>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <Appear><ListItem>Count your calories</ListItem></Appear>
+            <Appear><ListItem>Provide a meal plan based on dietary restrictions</ListItem></Appear>
           </List>
+          
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Quote>Now we bow</Quote>
+            <Cite>FINNER</Cite>
           </BlockQuote>
         </Slide>
       </Deck>
