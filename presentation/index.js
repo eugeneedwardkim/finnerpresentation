@@ -42,7 +42,7 @@ const theme = createTheme({
   secondary: "#000000",
   tertiary: "#ef6c00",
   quartenary: "#26a69a",
-  mediumgray: "#666"
+  lightgray: "#999"
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -60,30 +60,38 @@ export default class Presentation extends React.Component {
             a health and wellness app that creates a custom menu and counts your calories
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="mediumgray">
+        <Slide transition={["fade"]} bgColor="lightgray">
+          <Heading size={6} textColor="primary" caps>The Team</Heading>
+          <Text>
+            Eugene, Jared, & Rachel
+          </Text>
+          <Text>&nbsp;</Text>
           <Heading size={6} textColor="primary" caps>The Vision</Heading>
-          <Text size={6} textColor="secondary">An app that can...</Text>
+          <Text>
+            Take over the world
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>The Features So far:</Heading>
           <List>
-            <Appear><ListItem>Count your calories</ListItem></Appear>
-            <Appear><ListItem>Provide a meal plan based on dietary restrictions</ListItem></Appear>
-            <Appear><ListItem>Rule the world</ListItem></Appear>
+            <Appear><ListItem>Sign-up and preferences</ListItem></Appear>
+            <Appear><ListItem>Dashboard calories</ListItem></Appear>
+            <Appear><ListItem>Meal Plans</ListItem></Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>The future</Heading>
+          <List>
+            <Appear><ListItem>Take over the world</ListItem></Appear>
           </List>
           <Appear>
             <Image src={"../assets/pink-n-brain-todolist.jpg"}></Image>
           </Appear>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>The Features So far:</Heading>
-          <List>
-            <Appear><ListItem>Count your calories</ListItem></Appear>
-            <Appear><ListItem>Provide a meal plan based on dietary restrictions</ListItem></Appear>
-          </List>
-          
-        </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>Now we bow</Quote>
-            <Cite>FINNER</Cite>
+            <Quote>Any Questions?</Quote>
+            <Cite>Finner</Cite>
           </BlockQuote>
         </Slide>
       </Deck>
