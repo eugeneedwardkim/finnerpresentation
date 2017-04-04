@@ -4,6 +4,7 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   BlockQuote,
+  Layout,
   Cite,
   Deck,
   Heading,
@@ -35,9 +36,9 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
+  primary: "#262828",
+  secondary: "#f9fff9",
+  tertiary: "#949e94",
   quartenary: "#CECECE"
 }, {
   primary: "Montserrat",
@@ -50,20 +51,26 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            The Finner Application
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+          <Text margin="10px 0 0" textColor="tertiary" size={5} bold>
+            the fitness meal planner
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+        <Slide transition={["fade"]} bgColor="primary" align="flex-start flex-start">
+          <Heading fit textColor="secondary" >MEET THE TEAM</Heading>
+            <Layout fit align="flex-start">
+              <Text size={6} textColor="tertiary">Rachel Engle</Text>
+              <Text size={9} textColor="secondary">Star CSS programmer</Text>
+            </Layout>
+            <Layout fill>
+              <Text size={6} textColor="tertiary">Jared Nalwalker</Text>
+              <Text size={9} textColor="secondary">JS Wizz that does it all</Text>
+            </Layout>
+            <Layout>
+              <Text size={6} textColor="tertiary">Eugene Kim</Text>
+              <Text size={9} textColor="secondary">That one guy that helped</Text>
+            </Layout>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Standard List</Heading>
