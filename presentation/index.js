@@ -11,7 +11,9 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  Appear,
+  Image
 } from "spectacle";
 
 // Import image preloader util
@@ -29,7 +31,8 @@ const images = {
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  pinkybrain: require("../assets/pink-n-brain-todolist.jpg")
 };
 
 preloader(images);
@@ -39,6 +42,10 @@ const theme = createTheme({
   secondary: "#1F2022",
   tertiary: "#03A9FC",
   quartenary: "#CECECE"
+  secondary: "#000000",
+  tertiary: "#ef6c00",
+  quartenary: "#26a69a",
+  lightgray: "#999"
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -64,20 +71,44 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="secondary">Heading 4</Heading>
           <Heading size={5} textColor="secondary">Heading 5</Heading>
           <Text size={6} textColor="secondary">Standard text</Text>
+            Finner
+          </Heading>
+          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+            a health and wellness app that creates a custom menu and counts your calories
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="lightgray">
+          <Heading size={6} textColor="primary" caps>The Team</Heading>
+          <Text>
+            Eugene, Jared, & Rachel
+          </Text>
+          <Text>&nbsp;</Text>
+          <Heading size={6} textColor="primary" caps>The Vision</Heading>
+          <Text>
+            Take over the world
+          </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
+          <Heading size={6} textColor="secondary" caps>The Features So far:</Heading>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <Appear><ListItem>Sign-up and preferences</ListItem></Appear>
+            <Appear><ListItem>Dashboard calories</ListItem></Appear>
+            <Appear><ListItem>Meal Plans</ListItem></Appear>
           </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>The future</Heading>
+          <List>
+            <Appear><ListItem>Take over the world</ListItem></Appear>
+          </List>
+          <Appear>
+            <Image src={"../assets/pink-n-brain-todolist.jpg"}></Image>
+          </Appear>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Quote>Any Questions?</Quote>
+            <Cite>Finner</Cite>
           </BlockQuote>
         </Slide>
       </Deck>
