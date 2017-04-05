@@ -4,6 +4,7 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   BlockQuote,
+  listStylePosition,
   Cite,
   Deck,
   Heading,
@@ -32,16 +33,14 @@ const images = {
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png"),
-  pinkybrain: require("../assets/pink-n-brain-todolist.jpg")
+  pinkybrain: require("../assets/pink-n-brain-todolist.jpg"),
+  stretch: require('../assets/stretching.jpg')
 };
 
 preloader(images);
 
 const theme = createTheme({
   primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quartenary: "#CECECE"
   secondary: "#000000",
   tertiary: "#ef6c00",
   quartenary: "#26a69a",
@@ -55,32 +54,16 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-            Finner
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            a health and wellness app that creates a custom menu and counts your calories
+        <Slide transition={["fade"]} bgColor="secondary">
+          <Heading>Finner</Heading>
+          <Text margin="10px 0 0" textColor="primary" size={1} bold>
+            a better fitness planner
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="lightgray">
           <Heading size={6} textColor="primary" caps>The Team</Heading>
           <Text>
-            Eugene, Jared, & Rachel
+            Eugene, Jared, and Rachel
           </Text>
           <Text>&nbsp;</Text>
           <Heading size={6} textColor="primary" caps>The Vision</Heading>
@@ -88,21 +71,54 @@ export default class Presentation extends React.Component {
             Take over the world
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>The Features So far:</Heading>
+        <Slide transition={["fade"]} bgImage={images.stretch} bgDarken={0.55} textColor="primary" align="flex-start">
+          <Heading size={6} textColor="tertiary" caps>The Problem</Heading>
+          <Appear><Text size={9} textColor="tertiary">Diets Suck</Text></Appear>
           <List>
-            <Appear><ListItem>Sign-up and preferences</ListItem></Appear>
-            <Appear><ListItem>Dashboard calories</ListItem></Appear>
-            <Appear><ListItem>Meal Plans</ListItem></Appear>
+            <Appear><ListItem>The food sucks</ListItem></Appear>
+            <Appear><ListItem>The amount sucks</ListItem></Appear>
+            <Appear><ListItem>The result sucks</ListItem></Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>The Problem Cont...</Heading>
+          <Appear><Text size={9} text color="tertiary">Why does everything suck?</Text></Appear>
+          <List listStylePosition="inside">
+            <Appear><ListItem>Eating too little</ListItem></Appear>
+            <Appear><ListItem>Not tracking progress</ListItem></Appear>
+            <Appear><ListItem>Choosing the wrong food</ListItem></Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Find Your Daily Calories</Heading>
+          <List>
+            {/*Add in a video of what it looks like to signup*/}
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Track your progress</Heading>
+          <List>
+            {/*Add video or screen shot of what the dashboard looks like when updating*/}
+            <Appear><ListItem>Track your Progress</ListItem></Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Get the Right Food</Heading>
+          <List>
+            {/*Meal plan and how it works*/}
+            <Appear><ListItem>Track your Progress</ListItem></Appear>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>The future</Heading>
           <List>
-            <Appear><ListItem>Take over the world</ListItem></Appear>
+            <Appear><ListItem>Dietary Feedback</ListItem></Appear>
+            <Appear><ListItem>Increased Accuracy</ListItem></Appear>
+            <Appear><ListItem>Workout Tracking</ListItem></Appear>
+            <Appear><ListItem>Individual Expertise</ListItem></Appear>
           </List>
           <Appear>
-            <Image src={"../assets/pink-n-brain-todolist.jpg"}></Image>
+            <Image src={images.pinkybrain}></Image>
           </Appear>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
