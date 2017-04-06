@@ -58,9 +58,10 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["fade"]} bgColor="primary">
-          <Heading size={6} textColor="tertiary" caps>The Team</Heading>
-          <Text>
-            Eugene, Jared, and Rachel
+          <Heading fit size={1} textColor="tertiary" caps>The Team</Heading>
+          
+          <Text fit size={2}>
+            Jared, Rachel, and Eugene
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary">
@@ -70,17 +71,17 @@ export default class Presentation extends React.Component {
             a better meal planner
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgImage={images.stretch} bgDarken={0.55} textColor="primary" align="flex-start">
-          <Heading size={6} textColor="primary" caps>The Problem</Heading>
-          <Appear><Text size={5} textColor="primary" style={{textDecoration:'1px solid #f15b2a' }} >Diets suck.</Text></Appear>
-          <List style={{padding: '0 6em'}} listStylePosition="inside">
+        <Slide transition={["fade"]} bgImage={images.stretch} bgDarken={0.55} textColor="primary" >
+          <Heading size={1} textColor="primary" caps >The Problem</Heading>
+          <Appear><Text size={2} textColor="primary" fill style={{textDecoration:'1px solid #f15b2a' }} >Diets suck</Text></Appear>
+          <List size={2} fit listStylePosition="inside">
             <Appear><ListItem>The food sucks</ListItem></Appear>
             <Appear><ListItem>The amount sucks</ListItem></Appear>
             <Appear><ListItem>The result sucks</ListItem></Appear>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>The Problem Cont...</Heading>
+          <Heading size={6} textColor="secondary" caps fit >The Problem Cont...</Heading>
           <Appear><Text size={9} text color="tertiary">Why does everything suck?</Text></Appear>
           <List listStylePosition="inside" style={{padding: '0 4em'}}>
             <Appear><ListItem>Eating too little</ListItem></Appear>
