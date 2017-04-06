@@ -57,17 +57,17 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={6} textColor="tertiary" caps>The Team</Heading>
+          <Text>
+            Eugene, Jared, and Rachel
+          </Text>
+        </Slide>
         <Slide transition={["fade"]} bgColor="secondary">
           <Image src={images.finnerlogo} style={{ width:'200px'}}></Image>
           <Heading>FINNER</Heading>
           <Text margin="10px 0 0" textColor="primary" size={1} bold>
             a better meal planner
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary">
-          <Heading size={6} textColor="tertiary" caps>The Team</Heading>
-          <Text>
-            Eugene, Jared, and Rachel
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.stretch} bgDarken={0.55} textColor="primary" align="flex-start">
