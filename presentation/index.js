@@ -38,7 +38,8 @@ const images = {
   signup: require('../assets/signup.png'),
   calgraph: require('../assets/calorie-graph.png'),
   mealform: require('../assets/meals-form.png'),
-  finnerlogo: require('../assets/logo-finner@2x.png')
+  finnerlogo: require('../assets/logo-finner@2x.png'),
+  nuggets: require('../assets/nuggets.jpg')
 };
 
 preloader(images);
@@ -71,7 +72,7 @@ export default class Presentation extends React.Component {
             a better meal planner
           </Text>
         </Slide>
-        <Slide transition={["slide"]} bgImage={images.stretch} bgDarken={0.55} textColor="primary" >
+        <Slide transition={["fade"]} bgImage={images.stretch} bgDarken={0.55} textColor="primary" >
           <Heading size={1} textColor="primary" caps >The Problem</Heading>
           <Appear><Text size={2} textColor="primary" fill style={{textDecoration:'1px solid #f15b2a' }} >Diets suck</Text></Appear>
           <List size={2} fit style={{padding: '0 5em'}} listStylePosition="inside">
@@ -81,8 +82,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps fit >The Problem Cont...</Heading>
-          <Appear><Text size={9} text color="tertiary">Why does everything suck?</Text></Appear>
+          <Heading fit textColor="secondary" caps fit >Why does everything suck?</Heading>
           <List listStylePosition="inside" style={{padding: '0 4em'}}>
             <Appear><ListItem>Eating too little</ListItem></Appear>
             <Appear><ListItem>Not tracking progress</ListItem></Appear>
@@ -90,19 +90,19 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["slide"]} bgColor="primary" textColor="tertiary" style={{alignItems: 'flex-start'}}>
-          <Heading size={6} textColor="secondary" caps>Find Your Daily Calories</Heading>
+          <Heading fit textColor="secondary" caps>Find Your Daily Calories</Heading>
           <List>
-            <Image style={{ width: '75%', margin:'0 auto', display: 'block'}} src={images.signup}></Image>
+            <Image style={{ width: '85%', margin:'0 auto', display: 'block'}} src={images.signup}></Image>
           </List>
         </Slide>
         <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Track your progress</Heading>
+          <Heading fit textColor="secondary" caps>Track your progress</Heading>
           <List>
             <Image style={{ width: '100%', margin:'0 auto', display: 'block'}} src={images.calgraph}></Image>
           </List>
         </Slide>
         <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Get the Right Food</Heading>
+          <Heading fit textColor="secondary" caps>Get the Right Food</Heading>
           <List>
             <Image style={{ width: '80%', margin:'0 auto', display: 'block'}} src={images.mealform}></Image>
           </List>
@@ -116,8 +116,16 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Individual Expertise</ListItem></Appear>
           </List>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="secondary">
-          
+        <Slide transition={["slide"]} bgImage={images.nuggets} bgDarken={0.45} textColor="tertiary">
+           <Heading fit textColor="primary" caps>Get Your Cheat On</Heading>
+             <Appear>
+               <BlockQuote>
+                 <Quote size={8} textColor="primary">I’m driven by finding that, McNugget Sauce!</Quote>
+                 <Cite>Rick Sanchez</Cite>
+               </BlockQuote>
+             </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">    
           <Image src={images.finnerlogo} style={{ width:'200px'}}></Image>
           <Heading>FINNER</Heading>
           <Text margin="10px 0 0" textColor="primary" size={1} bold>
