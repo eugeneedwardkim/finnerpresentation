@@ -4,6 +4,10 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   BlockQuote,
+  Table,
+  TableHeaderItem,
+  TableItem,
+  TableRow,
   listStylePosition,
   Cite,
   Deck,
@@ -60,19 +64,25 @@ export default class Presentation extends React.Component {
             a better fitness planner
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="lightgray">
-          <Heading size={6} textColor="primary" caps>The Team</Heading>
-          <Text>
-            Eugene, Jared, and Rachel
-          </Text>
-          <Text>&nbsp;</Text>
-          <Heading size={6} textColor="primary" caps>The Vision</Heading>
-          <Text>
-            Take over the world
-          </Text>
+        <Slide transition={["fade"]} bgColor="lightgray" align="flex-startcenter">
+          <Heading size={3}textColor="primary" >The Team</Heading>
+          <Table>
+            <TableRow>
+              <TableItem>Rachel Engle</TableItem>
+              <TableItem textColor="primary">CSS Wizard</TableItem>
+            </TableRow>
+            <TableRow>
+              <TableItem>Jared Nalwalker</TableItem>
+              <TableItem textColor="primary">JS Heavy Hitter</TableItem>
+            </TableRow>
+            <TableRow>
+              <TableItem>Eugene Kim</TableItem>
+              <TableItem textColor="primary">That Guy</TableItem>
+            </TableRow>
+          </Table>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.stretch} bgDarken={0.55} textColor="primary" align="flex-start">
-          <Heading size={6} textColor="tertiary" caps>The Problem</Heading>
+          <Heading fit size={6} textColor="tertiary">The Problem</Heading>
           <Appear><Text size={9} textColor="tertiary">Diets Suck</Text></Appear>
           <List>
             <Appear><ListItem>The food sucks</ListItem></Appear>
