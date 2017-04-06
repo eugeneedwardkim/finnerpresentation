@@ -4,10 +4,6 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   BlockQuote,
-  Table,
-  TableHeaderItem,
-  TableItem,
-  TableRow,
   listStylePosition,
   Cite,
   Deck,
@@ -42,8 +38,7 @@ const images = {
   signup: require('../assets/signup.png'),
   calgraph: require('../assets/calorie-graph.png'),
   mealform: require('../assets/meals-form.png'),
-  finnerlogo: require('../assets/logo-finner@2x.png'),
-  nuggets: require('../assets/nuggets.jpg')
+  finnerlogo: require('../assets/logo-finner@2x.png')
 };
 
 preloader(images);
@@ -62,56 +57,57 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["fade"]} bgColor="primary">
+        <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} textColor="tertiary" caps>The Team</Heading>
           
           <Text fit size={2}>
             Jared, Rachel, and Eugene
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
+        <Slide transition={["zoom", "fade"]} bgColor="secondary">
           <Image src={images.finnerlogo} style={{ width:'200px'}}></Image>
           <Heading>FINNER</Heading>
           <Text margin="10px 0 0" textColor="primary" size={1} bold>
             a better meal planner
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgImage={images.stretch} bgDarken={0.55} textColor="primary" >
+        <Slide transition={["slide"]} bgImage={images.stretch} bgDarken={0.55} textColor="primary" >
           <Heading size={1} textColor="primary" caps >The Problem</Heading>
           <Appear><Text size={2} textColor="primary" fill style={{textDecoration:'1px solid #f15b2a' }} >Diets suck</Text></Appear>
-          <List size={2} fit listStylePosition="inside">
+          <List size={2} fit style={{padding: '0 5em'}} listStylePosition="inside">
             <Appear><ListItem>The food sucks</ListItem></Appear>
             <Appear><ListItem>The amount sucks</ListItem></Appear>
             <Appear><ListItem>The result sucks</ListItem></Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading fit textColor="secondary" caps fit >Why does everything suck?</Heading>
+        <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps fit >The Problem Cont...</Heading>
+          <Appear><Text size={9} text color="tertiary">Why does everything suck?</Text></Appear>
           <List listStylePosition="inside" style={{padding: '0 4em'}}>
             <Appear><ListItem>Eating too little</ListItem></Appear>
             <Appear><ListItem>Not tracking progress</ListItem></Appear>
             <Appear><ListItem>Choosing the wrong food</ListItem></Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading fit textColor="secondary" caps>Find Your Daily Calories</Heading>
+        <Slide transition={["slide"]} bgColor="primary" textColor="tertiary" style={{alignItems: 'flex-start'}}>
+          <Heading size={6} textColor="secondary" caps>Find Your Daily Calories</Heading>
           <List>
-            <Image style={{ width: '80%', margin:'0 auto', display: 'block'}} src={images.signup}></Image>
+            <Image style={{ width: '75%', margin:'0 auto', display: 'block'}} src={images.signup}></Image>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading fit textColor="secondary" caps>Track your progress</Heading>
+        <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Track your progress</Heading>
           <List>
-            <Image style={{ width: '80%', margin:'0 auto', display: 'block'}} src={images.calgraph}></Image>
+            <Image style={{ width: '100%', margin:'0 auto', display: 'block'}} src={images.calgraph}></Image>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading fit textColor="secondary" caps>Get the Right Food</Heading>
+        <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Get the Right Food</Heading>
           <List>
             <Image style={{ width: '80%', margin:'0 auto', display: 'block'}} src={images.mealform}></Image>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
           <Heading fit textColor="secondary" caps>The future</Heading>
           <List style={{padding: '0 6em'}}>
             <Appear><ListItem>Dietary Feedback</ListItem></Appear>
@@ -120,16 +116,8 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Individual Expertise</ListItem></Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgImage={images.nuggets} bgDarken={0.45} textColor="tertiary">
-          <Heading fit textColor="primary" caps>Get Your Cheat On</Heading>
-            <Appear>
-              <BlockQuote>
-                <Quote size={8} textColor="primary">I’m driven by finding that, McNugget Sauce!</Quote>
-                <Cite>Rick Sanchez</Cite>
-              </BlockQuote>
-            </Appear>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">          
+        <Slide transition={["zoom"]} bgColor="secondary">
+          
           <Image src={images.finnerlogo} style={{ width:'200px'}}></Image>
           <Heading>FINNER</Heading>
           <Text margin="10px 0 0" textColor="primary" size={1} bold>
