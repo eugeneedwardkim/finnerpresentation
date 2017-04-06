@@ -42,7 +42,8 @@ const images = {
   signup: require('../assets/signup.png'),
   calgraph: require('../assets/calorie-graph.png'),
   mealform: require('../assets/meals-form.png'),
-  finnerlogo: require('../assets/logo-finner@2x.png')
+  finnerlogo: require('../assets/logo-finner@2x.png'),
+  nuggets: require('../assets/nuggets.jpg')
 };
 
 preloader(images);
@@ -85,8 +86,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps fit >The Problem Cont...</Heading>
-          <Appear><Text size={9} text color="tertiary">Why does everything suck?</Text></Appear>
+          <Heading fit textColor="secondary" caps fit >Why does everything suck?</Heading>
           <List listStylePosition="inside" style={{padding: '0 4em'}}>
             <Appear><ListItem>Eating too little</ListItem></Appear>
             <Appear><ListItem>Not tracking progress</ListItem></Appear>
@@ -94,25 +94,25 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Find Your Daily Calories</Heading>
+          <Heading fit textColor="secondary" caps>Find Your Daily Calories</Heading>
           <List>
             <Image style={{ width: '80%', margin:'0 auto', display: 'block'}} src={images.signup}></Image>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Track your progress</Heading>
+          <Heading fit textColor="secondary" caps>Track your progress</Heading>
           <List>
             <Image style={{ width: '80%', margin:'0 auto', display: 'block'}} src={images.calgraph}></Image>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Get the Right Food</Heading>
+          <Heading fit textColor="secondary" caps>Get the Right Food</Heading>
           <List>
             <Image style={{ width: '80%', margin:'0 auto', display: 'block'}} src={images.mealform}></Image>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>The future</Heading>
+          <Heading fit textColor="secondary" caps>The future</Heading>
           <List style={{padding: '0 6em'}}>
             <Appear><ListItem>Dietary Feedback</ListItem></Appear>
             <Appear><ListItem>Increased Accuracy</ListItem></Appear>
@@ -120,8 +120,16 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Individual Expertise</ListItem></Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary">
-          
+        <Slide transition={["fade"]} bgImage={images.nuggets} bgDarken={0.45} textColor="tertiary">
+          <Heading fit textColor="primary" caps>Get Your Cheat On</Heading>
+            <Appear>
+              <BlockQuote>
+                <Quote size={8} textColor="primary">I’m driven by finding that, McNugget Sauce!</Quote>
+                <Cite>Rick Sanchez</Cite>
+              </BlockQuote>
+            </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary">          
           <Image src={images.finnerlogo} style={{ width:'200px'}}></Image>
           <Heading>FINNER</Heading>
           <Text margin="10px 0 0" textColor="primary" size={1} bold>
